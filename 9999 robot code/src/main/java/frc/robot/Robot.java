@@ -7,8 +7,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj.motorcontrol.MotorController;
-import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
 
 /**
  * This is a demo program showing the use of the DifferentialDrive class, specifically it contains
@@ -19,8 +18,8 @@ public class Robot extends TimedRobot {
   private Joystick m_leftStick;
   private Joystick m_rightStick;
 
-  private final MotorController m_leftMotor = new PWMSparkMax(0);
-  private final MotorController m_rightMotor = new PWMSparkMax(1);
+  private final WPI_TalonFX m_leftMotor = new WPI_TalonFX(0);
+  private final WPI_TalonFX m_rightMotor = new WPI_TalonFX(1);
 
   @Override
   public void robotInit() {
